@@ -393,5 +393,10 @@ namespace Proyecto_Tacos_Gomez
             consulta.Show();
             this.Close();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
