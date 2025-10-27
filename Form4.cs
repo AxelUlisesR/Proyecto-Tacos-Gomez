@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -21,6 +22,8 @@ namespace Proyecto_Tacos_Gomez
         {
             try
             {
+                txtNombre.MaxLength = 40;
+                txtCategoria.MaxLength = 40;
                 conexion.Open();
                 comando.Connection = conexion;
                 CargarProductos();
@@ -101,12 +104,12 @@ namespace Proyecto_Tacos_Gomez
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(mtbPrecio.Text))
+            if (!ValidarFormulario())
             {
-                MessageBox.Show("Debe llenar todos los campos obligatorios antes de guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+                txtNombre.KeyPress += txtNombre_KeyPress;
+                txtCategoria.KeyPress += txtCategoria_KeyPress;
             }
-
             try
             {
                 comando.CommandText = "INSERT INTO Productos (nombre, precio, categoria) VALUES (@nombre, @precio, @categoria)";
@@ -133,7 +136,10 @@ namespace Proyecto_Tacos_Gomez
                 MessageBox.Show("Debe seleccionar un producto antes de modificar.");
                 return;
             }
-
+            if (!ValidarFormulario())
+            {
+                return;
+            }
             try
             {
                 comando.CommandText = "UPDATE Productos SET nombre=@nombre, precio=@precio, categoria=@categoria WHERE idProducto=@id";
@@ -219,6 +225,89 @@ namespace Proyecto_Tacos_Gomez
             {
                 MessageBox.Show("Error al cerrar la ventana: " + ex.Message);
             }
+        }
+        private bool ValidarFormulario()
+        {
+            bool esValido = true;
+            errorProvider1.Clear();
+
+            // 1. Campos obligatorios
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre es obligatorio.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(mtbPrecio.Text))
+            {
+                errorProvider1.SetError(mtbPrecio, "El precio es obligatorio.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtCategoria.Text))
+            {
+                errorProvider1.SetError(txtCategoria, "La categoria es obligatorio.");
+                esValido = false;
+            }
+
+            // 2. Solo letras en nombre
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text) &&
+                !Regex.IsMatch(txtNombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre solo debe contener letras.");
+                esValido = false;
+            }
+
+            // 3. Longitud máxima para nombre y categoria
+            if (txtNombre.Text.Length > 40)
+            {
+                errorProvider1.SetError(txtNombre, "El nombre no puede tener más de 40 caracteres.");
+                esValido = false;
+            }
+            if (txtCategoria.Text.Length > 40)
+            {
+                errorProvider1.SetError(txtCategoria, "La categoria no puede tener más de 40 caracteres.");
+                esValido = false;
+            }
+            //4. solo letras en categoria
+            if (!string.IsNullOrWhiteSpace(txtCategoria.Text) &&
+                !Regex.IsMatch(txtCategoria.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            {
+                errorProvider1.SetError(txtNombre, "La categoria solo debe contener letras.");
+                esValido = false;
+            }
+            if (!string.IsNullOrWhiteSpace(mtbPrecio.Text) &&
+                !Regex.IsMatch(mtbPrecio.Text, @"^\d+$"))
+            {
+                errorProvider1.SetError(mtbPrecio, "El precio solo debe contener números.");
+                esValido = false;
+            }
+
+
+            return esValido;
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtCategoria_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void mtbPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+
         }
     }
 }

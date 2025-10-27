@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Npgsql;
 
@@ -21,6 +22,9 @@ namespace Proyecto_Tacos_Gomez
         {
             try
             {
+                txtNombre.MaxLength = 40;
+                txtDireccion.MaxLength = 80;
+                txtRol.MaxLength = 30;
                 conexion.Open();
                 comando.Connection = conexion;
                 CargarEmpleados();
@@ -105,13 +109,12 @@ namespace Proyecto_Tacos_Gomez
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtDireccion.Text) ||
-                string.IsNullOrWhiteSpace(maskedTextBox1.Text) || string.IsNullOrWhiteSpace(txtRol.Text))
+            if (!ValidarFormulario())
             {
-                MessageBox.Show("Debe llenar todos los campos antes de guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+                txtNombre.KeyPress += txtNombre_KeyPress;
+                txtRol.KeyPress += txtRol_KeyPress;
             }
-
             try
             {
                 comando.CommandText = "INSERT INTO empleados (nombre, direccion, telefono, rol) VALUES (@nombre, @direccion, @telefono, @rol)";
@@ -137,6 +140,10 @@ namespace Proyecto_Tacos_Gomez
             if (string.IsNullOrWhiteSpace(txtId.Text))
             {
                 MessageBox.Show("Debe seleccionar un empleado antes de modificar.");
+                return;
+            }
+            if (!ValidarFormulario())
+            {
                 return;
             }
 
@@ -226,6 +233,91 @@ namespace Proyecto_Tacos_Gomez
             catch (Exception ex)
             {
                 MessageBox.Show("Error al cerrar la ventana: " + ex.Message);
+            }
+        }
+        private bool ValidarFormulario()
+        {
+            bool esValido = true;
+            errorProvider1.Clear();
+
+            // 1. Campos obligatorios
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre es obligatorio.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                errorProvider1.SetError(txtDireccion, "La dirección es obligatoria.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(maskedTextBox1.Text))
+            {
+                errorProvider1.SetError(maskedTextBox1, "El teléfono es obligatorio.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtRol.Text))
+            {
+                errorProvider1.SetError(txtRol, "El rol es obligatorio.");
+                esValido = false;
+            }
+
+            // 2. Solo letras en nombre
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text) &&
+                !Regex.IsMatch(txtNombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre solo debe contener letras.");
+                esValido = false;
+            }
+
+            // 3. Longitud máxima para nombre y dirección
+            if (txtNombre.Text.Length > 40)
+            {
+                errorProvider1.SetError(txtNombre, "El nombre no puede tener más de 40 caracteres.");
+                esValido = false;
+            }
+            if (txtDireccion.Text.Length > 80)
+            {
+                errorProvider1.SetError(txtDireccion, "La dirección no puede tener más de 80 caracteres.");
+                esValido = false;
+            }
+            if (txtRol.Text.Length > 30)
+            {
+                errorProvider1.SetError(txtRol, "El rol no puede tener más de 80 caracteres.");
+                esValido = false;
+            }
+
+            // 4. Teléfono: solo números y 10 dígitos
+            string telefono = maskedTextBox1.Text.Replace(" ", "").Replace("-", "");
+            if (!Regex.IsMatch(telefono, @"^\d{10}$"))
+            {
+                errorProvider1.SetError(maskedTextBox1, "El teléfono debe tener 10 dígitos numéricos.");
+                esValido = false;
+            }
+
+            if (!string.IsNullOrWhiteSpace(txtRol.Text) &&
+                !Regex.IsMatch(txtRol.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            {
+                errorProvider1.SetError(txtNombre, "El rol solo debe contener letras.");
+                esValido = false;
+            }
+
+            return esValido;
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void txtRol_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

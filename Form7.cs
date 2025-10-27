@@ -31,7 +31,7 @@ namespace Proyecto_Tacos_Gomez
                 ReportDataSource fuente = new ReportDataSource("DataSet1", ds.Tables["orden"]);
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(fuente);
-                reportViewer1.LocalReport.ReportPath = "C:\\Users\\axelr\\Source\\Repos\\Proyecto-Tacos-Gomez\\Report1.rdlc";
+                reportViewer1.LocalReport.ReportPath = "C:\\Users\\gomez\\Source\\Repos\\Proyecto-Tacos-Gomez\\Report1.rdlc";
 
                 reportViewer1.RefreshReport();
             }
@@ -52,7 +52,7 @@ namespace Proyecto_Tacos_Gomez
                 ReportDataSource fuente = new ReportDataSource("DataSet1", ds.Tables["producto"]);
                 reportViewer1.LocalReport.DataSources.Clear();
                 reportViewer1.LocalReport.DataSources.Add(fuente);
-                reportViewer1.LocalReport.ReportPath = "C:\\Users\\axelr\\Source\\Repos\\Proyecto-Tacos-Gomez\\Report2.rdlc";
+                reportViewer1.LocalReport.ReportPath = "C:\\Users\\gomez\\Source\\Repos\\Proyecto-Tacos-Gomez\\Report2.rdlc";
 
                 reportViewer1.RefreshReport();
             }

@@ -2,6 +2,7 @@
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 using Npgsql;
 
 namespace Proyecto_Tacos_Gomez
@@ -21,6 +22,12 @@ namespace Proyecto_Tacos_Gomez
         {
             try
             {
+                // Limita la cantidad de caracteres permitidos
+                txtNombre.MaxLength = 40;
+                txtDireccion.MaxLength = 80;
+                // Si usas un TextBox para teléfono, puedes poner 10
+                // maskedTextBox1 no tiene MaxLength, pero puedes controlar el formato con el Mask
+
                 conexion.Open();
                 comando.Connection = conexion;
                 CargarClientes();
@@ -104,10 +111,10 @@ namespace Proyecto_Tacos_Gomez
 
         private void btnGrabar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombre.Text) || string.IsNullOrWhiteSpace(txtDireccion.Text) || string.IsNullOrWhiteSpace(maskedTextBox1.Text))
+            if (!ValidarFormulario())
             {
-                MessageBox.Show("Debe llenar todos los campos antes de guardar.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
+                txtNombre.KeyPress += txtNombre_KeyPress;
             }
 
             try
@@ -134,6 +141,11 @@ namespace Proyecto_Tacos_Gomez
             if (string.IsNullOrWhiteSpace(txtId.Text))
             {
                 MessageBox.Show("Debe seleccionar o buscar un cliente antes de modificar.");
+                return;
+            }
+
+            if (!ValidarFormulario())
+            {
                 return;
             }
 
@@ -223,6 +235,67 @@ namespace Proyecto_Tacos_Gomez
                 MessageBox.Show("Error al cerrar la ventana: " + ex.Message);
             }
         }
+        private bool ValidarFormulario()
+        {
+            bool esValido = true;
+            errorProvider1.Clear();
+
+            // 1. Campos obligatorios
+            if (string.IsNullOrWhiteSpace(txtNombre.Text))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre es obligatorio.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(txtDireccion.Text))
+            {
+                errorProvider1.SetError(txtDireccion, "La dirección es obligatoria.");
+                esValido = false;
+            }
+            if (string.IsNullOrWhiteSpace(maskedTextBox1.Text))
+            {
+                errorProvider1.SetError(maskedTextBox1, "El teléfono es obligatorio.");
+                esValido = false;
+            }
+
+            // 2. Solo letras en nombre
+            if (!string.IsNullOrWhiteSpace(txtNombre.Text) &&
+                !Regex.IsMatch(txtNombre.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            {
+                errorProvider1.SetError(txtNombre, "El nombre solo debe contener letras.");
+                esValido = false;
+            }
+
+            // 3. Longitud máxima para nombre y dirección
+            if (txtNombre.Text.Length > 40)
+            {
+                errorProvider1.SetError(txtNombre, "El nombre no puede tener más de 40 caracteres.");
+                esValido = false;
+            }
+            if (txtDireccion.Text.Length > 80)
+            {
+                errorProvider1.SetError(txtDireccion, "La dirección no puede tener más de 80 caracteres.");
+                esValido = false;
+            }
+
+            // 4. Teléfono: solo números y 10 dígitos
+            string telefono = maskedTextBox1.Text.Replace(" ", "").Replace("-", "");
+            if (!Regex.IsMatch(telefono, @"^\d{10}$"))
+            {
+                errorProvider1.SetError(maskedTextBox1, "El teléfono debe tener 10 dígitos numéricos.");
+                esValido = false;
+            }
+
+            return esValido;
+        }   
+private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite solo letras, espacios y teclas de control (como backspace)
+            if (!char.IsControl(e.KeyChar) && !char.IsLetter(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+    }
+        
 
         }
 }
