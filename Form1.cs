@@ -46,5 +46,12 @@ namespace Proyecto_Tacos_Gomez
             ventasForm.Show();
 
         }
+
+        private void reportesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Form7 reportesForm = new Form7();
+            Hide();
+            reportesForm.Show();
+        }
     }
 }
