@@ -397,7 +397,7 @@
             this.txtIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtIVA.Enabled = false;
             this.txtIVA.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtIVA.Location = new System.Drawing.Point(1195, 779);
+            this.txtIVA.Location = new System.Drawing.Point(1194, 796);
             this.txtIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(216, 39);
@@ -407,7 +407,7 @@
             // 
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtTotal.Location = new System.Drawing.Point(1195, 835);
+            this.txtTotal.Location = new System.Drawing.Point(1194, 852);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(216, 39);
@@ -418,7 +418,7 @@
             this.txtSubtotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtSubtotal.Location = new System.Drawing.Point(1195, 726);
+            this.txtSubtotal.Location = new System.Drawing.Point(1194, 743);
             this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(216, 39);
@@ -428,7 +428,7 @@
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label13.Location = new System.Drawing.Point(1032, 726);
+            this.label13.Location = new System.Drawing.Point(1031, 743);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(155, 52);
@@ -440,7 +440,7 @@
             // 
             this.label19.BackColor = System.Drawing.Color.Transparent;
             this.label19.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label19.Location = new System.Drawing.Point(1044, 834);
+            this.label19.Location = new System.Drawing.Point(1043, 851);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(143, 52);
@@ -452,7 +452,7 @@
             // 
             this.label18.BackColor = System.Drawing.Color.Transparent;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label18.Location = new System.Drawing.Point(1097, 778);
+            this.label18.Location = new System.Drawing.Point(1096, 795);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(90, 65);
