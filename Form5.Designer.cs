@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.txtCliente = new System.Windows.Forms.MaskedTextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -53,20 +60,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnGrabar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label20 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label14 = new System.Windows.Forms.Label();
             this.btnSeleccionarPlato = new System.Windows.Forms.Button();
@@ -83,13 +76,27 @@
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.txtIdProducto = new System.Windows.Forms.TextBox();
             this.txtCantidad = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.dgvMenu = new System.Windows.Forms.DataGridView();
+            this.label20 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbCliente
@@ -99,7 +106,7 @@
             this.cbCliente.FormattingEnabled = true;
             this.cbCliente.Location = new System.Drawing.Point(162, 35);
             this.cbCliente.Name = "cbCliente";
-            this.cbCliente.Size = new System.Drawing.Size(543, 40);
+            this.cbCliente.Size = new System.Drawing.Size(498, 40);
             this.cbCliente.TabIndex = 78;
             this.cbCliente.SelectedIndexChanged += new System.EventHandler(this.cbCliente_SelectedIndexChanged);
             // 
@@ -121,7 +128,7 @@
             this.txtDireccion.Font = new System.Drawing.Font("Segoe UI", 14.14286F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDireccion.Location = new System.Drawing.Point(162, 90);
             this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(543, 39);
+            this.txtDireccion.Size = new System.Drawing.Size(498, 39);
             this.txtDireccion.TabIndex = 76;
             // 
             // label2
@@ -167,7 +174,7 @@
             this.cbEmpleado.FormattingEnabled = true;
             this.cbEmpleado.Location = new System.Drawing.Point(139, 34);
             this.cbEmpleado.Name = "cbEmpleado";
-            this.cbEmpleado.Size = new System.Drawing.Size(566, 40);
+            this.cbEmpleado.Size = new System.Drawing.Size(522, 40);
             this.cbEmpleado.TabIndex = 81;
             this.cbEmpleado.SelectedIndexChanged += new System.EventHandler(this.cbEmpleado_SelectedIndexChanged);
             // 
@@ -211,7 +218,7 @@
             this.txtDireccionEmpleado.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.txtDireccionEmpleado.Location = new System.Drawing.Point(139, 92);
             this.txtDireccionEmpleado.Name = "txtDireccionEmpleado";
-            this.txtDireccionEmpleado.Size = new System.Drawing.Size(566, 39);
+            this.txtDireccionEmpleado.Size = new System.Drawing.Size(522, 39);
             this.txtDireccionEmpleado.TabIndex = 76;
             // 
             // label5
@@ -273,9 +280,9 @@
             this.panel3.Controls.Add(this.groupBox3);
             this.panel3.Controls.Add(this.groupBox2);
             this.panel3.Controls.Add(this.txtId);
-            this.panel3.Location = new System.Drawing.Point(36, 40);
+            this.panel3.Location = new System.Drawing.Point(26, 26);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1854, 974);
+            this.panel3.Size = new System.Drawing.Size(1871, 944);
             this.panel3.TabIndex = 105;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -351,10 +358,10 @@
             // 
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(85)))));
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNuevo.Location = new System.Drawing.Point(1019, 276);
+            this.btnNuevo.Location = new System.Drawing.Point(767, 231);
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(150, 80);
+            this.btnNuevo.Size = new System.Drawing.Size(144, 70);
             this.btnNuevo.TabIndex = 108;
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.UseVisualStyleBackColor = false;
@@ -365,184 +372,14 @@
             this.btnGrabar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(120)))), ((int)(((byte)(170)))));
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(1016, 399);
+            this.btnGrabar.Location = new System.Drawing.Point(767, 342);
             this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
-            this.btnGrabar.Size = new System.Drawing.Size(150, 80);
+            this.btnGrabar.Size = new System.Drawing.Size(144, 70);
             this.btnGrabar.TabIndex = 109;
             this.btnGrabar.Text = "Grabar";
             this.btnGrabar.UseVisualStyleBackColor = false;
             this.btnGrabar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(145)))), ((int)(((byte)(50)))));
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(1019, 609);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(185, 80);
-            this.button2.TabIndex = 110;
-            this.button2.Text = "Consultar";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.button3.Location = new System.Drawing.Point(1626, 823);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(192, 105);
-            this.button3.TabIndex = 111;
-            this.button3.Text = "Salir";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_Tacos_Gomez.Properties.Resources.Captura_de_pantalla_2025_10_26_120603;
-            this.pictureBox1.Location = new System.Drawing.Point(29, 31);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(199, 148);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 123;
-            this.pictureBox1.TabStop = false;
-            // 
-            // dgvMenu
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 16.2F);
-            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Menú,
-            this.Concepto,
-            this.Descripcion,
-            this.Precio,
-            this.Cantidad,
-            this.Importe,
-            this.Plato});
-            this.dgvMenu.Location = new System.Drawing.Point(1223, 45);
-            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvMenu.Name = "dgvMenu";
-            this.dgvMenu.ReadOnly = true;
-            this.dgvMenu.RowHeadersWidth = 51;
-            this.dgvMenu.RowTemplate.Height = 24;
-            this.dgvMenu.Size = new System.Drawing.Size(582, 623);
-            this.dgvMenu.TabIndex = 106;
-            // 
-            // Id_Menú
-            // 
-            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.Id_Menú.HeaderText = "Id_Menú";
-            this.Id_Menú.MinimumWidth = 6;
-            this.Id_Menú.Name = "Id_Menú";
-            this.Id_Menú.ReadOnly = true;
-            this.Id_Menú.Width = 157;
-            // 
-            // Concepto
-            // 
-            this.Concepto.HeaderText = "Producto";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Categoria";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Importe
-            // 
-            this.Importe.HeaderText = "Importe";
-            this.Importe.MinimumWidth = 6;
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            // 
-            // Plato
-            // 
-            this.Plato.HeaderText = "Plato";
-            this.Plato.MinimumWidth = 9;
-            this.Plato.Name = "Plato";
-            this.Plato.ReadOnly = true;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Segoe UI", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(236, 32);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(297, 106);
-            this.label20.TabIndex = 113;
-            this.label20.Text = "Orden:";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.cbEmpleado);
-            this.groupBox3.Controls.Add(this.txtDireccionEmpleado);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Controls.Add(this.txtRol);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Controls.Add(this.txtTelefonoEmpleado);
-            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(29, 393);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(718, 296);
-            this.groupBox3.TabIndex = 122;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Empleado";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.txtDireccion);
-            this.groupBox2.Controls.Add(this.cbCliente);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.txtCliente);
-            this.groupBox2.Controls.Add(this.Telefono);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(29, 186);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(718, 201);
-            this.groupBox2.TabIndex = 121;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cliente";
             // 
             // groupBox1
             // 
@@ -562,9 +399,9 @@
             this.groupBox1.Controls.Add(this.txtIdProducto);
             this.groupBox1.Controls.Add(this.txtCantidad);
             this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.groupBox1.Location = new System.Drawing.Point(29, 695);
+            this.groupBox1.Location = new System.Drawing.Point(27, 645);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(968, 269);
+            this.groupBox1.Size = new System.Drawing.Size(908, 277);
             this.groupBox1.TabIndex = 120;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Producto";
@@ -585,10 +422,10 @@
             // 
             this.btnSeleccionarPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(175)))), ((int)(((byte)(160)))));
             this.btnSeleccionarPlato.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnSeleccionarPlato.Location = new System.Drawing.Point(744, 198);
+            this.btnSeleccionarPlato.Location = new System.Drawing.Point(535, 200);
             this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
-            this.btnSeleccionarPlato.Size = new System.Drawing.Size(220, 60);
+            this.btnSeleccionarPlato.Size = new System.Drawing.Size(220, 56);
             this.btnSeleccionarPlato.TabIndex = 99;
             this.btnSeleccionarPlato.Text = "Seleccionar plato";
             this.btnSeleccionarPlato.UseVisualStyleBackColor = false;
@@ -598,7 +435,7 @@
             // 
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label15.Location = new System.Drawing.Point(-2, 222);
+            this.label15.Location = new System.Drawing.Point(-2, 200);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(128, 45);
@@ -614,7 +451,7 @@
             this.cboProducto.Location = new System.Drawing.Point(142, 29);
             this.cboProducto.Margin = new System.Windows.Forms.Padding(4);
             this.cboProducto.Name = "cboProducto";
-            this.cboProducto.Size = new System.Drawing.Size(538, 40);
+            this.cboProducto.Size = new System.Drawing.Size(519, 40);
             this.cboProducto.TabIndex = 79;
             this.cboProducto.SelectedIndexChanged += new System.EventHandler(this.cboProducto_SelectedIndexChanged);
             // 
@@ -622,7 +459,7 @@
             // 
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label11.Location = new System.Drawing.Point(30, 154);
+            this.label11.Location = new System.Drawing.Point(30, 148);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 52);
@@ -634,10 +471,10 @@
             // 
             this.btnNuevoPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(85)))));
             this.btnNuevoPlato.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.btnNuevoPlato.Location = new System.Drawing.Point(378, 198);
+            this.btnNuevoPlato.Location = new System.Drawing.Point(348, 200);
             this.btnNuevoPlato.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoPlato.Name = "btnNuevoPlato";
-            this.btnNuevoPlato.Size = new System.Drawing.Size(174, 57);
+            this.btnNuevoPlato.Size = new System.Drawing.Size(160, 56);
             this.btnNuevoPlato.TabIndex = 98;
             this.btnNuevoPlato.Text = "Nuevo plato";
             this.btnNuevoPlato.UseVisualStyleBackColor = false;
@@ -659,7 +496,7 @@
             // 
             this.label17.BackColor = System.Drawing.Color.Transparent;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label17.Location = new System.Drawing.Point(361, 154);
+            this.label17.Location = new System.Drawing.Point(342, 151);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(92, 36);
@@ -675,14 +512,14 @@
             this.txtCategoria.Location = new System.Drawing.Point(142, 90);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(538, 39);
+            this.txtCategoria.Size = new System.Drawing.Size(519, 39);
             this.txtCategoria.TabIndex = 88;
             // 
             // txtPlato
             // 
             this.txtPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtPlato.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtPlato.Location = new System.Drawing.Point(460, 151);
+            this.txtPlato.Location = new System.Drawing.Point(441, 148);
             this.txtPlato.Name = "txtPlato";
             this.txtPlato.Size = new System.Drawing.Size(220, 39);
             this.txtPlato.TabIndex = 96;
@@ -691,10 +528,10 @@
             // 
             this.cmdAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(150)))));
             this.cmdAceptar.Font = new System.Drawing.Font("Segoe UI", 15.85714F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cmdAceptar.Location = new System.Drawing.Point(744, 114);
+            this.cmdAceptar.Location = new System.Drawing.Point(700, 135);
             this.cmdAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdAceptar.Name = "cmdAceptar";
-            this.cmdAceptar.Size = new System.Drawing.Size(97, 76);
+            this.cmdAceptar.Size = new System.Drawing.Size(95, 56);
             this.cmdAceptar.TabIndex = 91;
             this.cmdAceptar.Text = "Ok";
             this.cmdAceptar.UseVisualStyleBackColor = false;
@@ -704,7 +541,7 @@
             // 
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label12.Location = new System.Drawing.Point(709, 41);
+            this.label12.Location = new System.Drawing.Point(672, 37);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(61, 40);
@@ -717,7 +554,7 @@
             this.txtPrecio.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtPrecio.Enabled = false;
             this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtPrecio.Location = new System.Drawing.Point(142, 151);
+            this.txtPrecio.Location = new System.Drawing.Point(142, 145);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(177, 39);
             this.txtPrecio.TabIndex = 92;
@@ -727,7 +564,7 @@
             this.txtIdProducto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtIdProducto.Enabled = false;
             this.txtIdProducto.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtIdProducto.Location = new System.Drawing.Point(796, 30);
+            this.txtIdProducto.Location = new System.Drawing.Point(740, 38);
             this.txtIdProducto.Name = "txtIdProducto";
             this.txtIdProducto.Size = new System.Drawing.Size(144, 39);
             this.txtIdProducto.TabIndex = 94;
@@ -736,20 +573,207 @@
             // 
             this.txtCantidad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtCantidad.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtCantidad.Location = new System.Drawing.Point(142, 219);
+            this.txtCantidad.Location = new System.Drawing.Point(142, 197);
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(177, 39);
             this.txtCantidad.TabIndex = 93;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(145)))), ((int)(((byte)(50)))));
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(767, 485);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(144, 70);
+            this.button2.TabIndex = 110;
+            this.button2.Text = "Consultar";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button3
+            // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
+            this.button3.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.button3.Location = new System.Drawing.Point(1702, 852);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(144, 70);
+            this.button3.TabIndex = 111;
+            this.button3.Text = "Salir";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // dgvMenu
+            // 
+            this.dgvMenu.AllowUserToAddRows = false;
+            this.dgvMenu.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id_Menú,
+            this.Concepto,
+            this.Descripcion,
+            this.Precio,
+            this.Cantidad,
+            this.Importe,
+            this.Plato});
+            this.dgvMenu.EnableHeadersVisualStyles = false;
+            this.dgvMenu.Location = new System.Drawing.Point(957, 23);
+            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvMenu.Name = "dgvMenu";
+            this.dgvMenu.ReadOnly = true;
+            this.dgvMenu.RowHeadersWidth = 51;
+            this.dgvMenu.RowTemplate.Height = 24;
+            this.dgvMenu.Size = new System.Drawing.Size(889, 795);
+            this.dgvMenu.TabIndex = 106;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Segoe UI", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(207, 33);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(297, 106);
+            this.label20.TabIndex = 113;
+            this.label20.Text = "Orden:";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbEmpleado);
+            this.groupBox3.Controls.Add(this.txtDireccionEmpleado);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Controls.Add(this.txtRol);
+            this.groupBox3.Controls.Add(this.label6);
+            this.groupBox3.Controls.Add(this.label4);
+            this.groupBox3.Controls.Add(this.label5);
+            this.groupBox3.Controls.Add(this.txtTelefonoEmpleado);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(27, 366);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(692, 264);
+            this.groupBox3.TabIndex = 122;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Empleado";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.txtDireccion);
+            this.groupBox2.Controls.Add(this.cbCliente);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.txtCliente);
+            this.groupBox2.Controls.Add(this.Telefono);
+            this.groupBox2.Controls.Add(this.label2);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(28, 156);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(691, 201);
+            this.groupBox2.TabIndex = 121;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Cliente";
             // 
             // txtId
             // 
             this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtId.Font = new System.Drawing.Font("Segoe UI", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtId.Location = new System.Drawing.Point(657, 60);
+            this.txtId.Location = new System.Drawing.Point(489, 52);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(153, 87);
             this.txtId.TabIndex = 119;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_Tacos_Gomez.Properties.Resources.Captura_de_pantalla_2025_10_26_180606;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 123;
+            this.pictureBox1.TabStop = false;
+            // 
+            // Id_Menú
+            // 
+            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_Menú.HeaderText = "ID Menú";
+            this.Id_Menú.MinimumWidth = 6;
+            this.Id_Menú.Name = "Id_Menú";
+            this.Id_Menú.ReadOnly = true;
+            this.Id_Menú.Width = 133;
+            // 
+            // Concepto
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Concepto.HeaderText = "Producto";
+            this.Concepto.MinimumWidth = 6;
+            this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
+            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Descripcion.HeaderText = "Categoria";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 6;
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            // 
+            // Plato
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Plato.HeaderText = "Plato";
+            this.Plato.MinimumWidth = 9;
+            this.Plato.Name = "Plato";
+            this.Plato.ReadOnly = true;
             // 
             // Ventas
             // 
@@ -757,7 +781,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(233)))), ((int)(((byte)(221)))));
-            this.ClientSize = new System.Drawing.Size(1924, 1055);
+            this.ClientSize = new System.Drawing.Size(1924, 994);
             this.Controls.Add(this.panel3);
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -766,14 +790,14 @@
             this.Load += new System.EventHandler(this.Ventas_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -821,6 +845,11 @@
         private System.Windows.Forms.TextBox txtPlato;
         private System.Windows.Forms.Button btnNuevoPlato;
         private System.Windows.Forms.Button btnSeleccionarPlato;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id_Menú;
         private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
@@ -828,10 +857,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
         private System.Windows.Forms.DataGridViewTextBoxColumn Plato;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
