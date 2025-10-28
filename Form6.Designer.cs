@@ -39,6 +39,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label16 = new System.Windows.Forms.Label();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
+            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
             this.txtRol = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -48,11 +55,20 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.txtIVA = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txtEstado = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.cmdSalir = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
+            this.txtFecha = new System.Windows.Forms.TextBox();
             this.cmdPagar = new System.Windows.Forms.Button();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.cmdConsultar = new System.Windows.Forms.Button();
@@ -65,22 +81,6 @@
             this.txtCliente = new System.Windows.Forms.MaskedTextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
             this.cmdCancelar = new System.Windows.Forms.Button();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.txtIVA = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtEstado = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -135,6 +135,72 @@
             this.dgvMenu.RowTemplate.Height = 24;
             this.dgvMenu.Size = new System.Drawing.Size(1052, 680);
             this.dgvMenu.TabIndex = 124;
+            // 
+            // Id_Menú
+            // 
+            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_Menú.HeaderText = "ID Menú";
+            this.Id_Menú.MinimumWidth = 6;
+            this.Id_Menú.Name = "Id_Menú";
+            this.Id_Menú.ReadOnly = true;
+            this.Id_Menú.Width = 133;
+            // 
+            // Concepto
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Concepto.HeaderText = "Producto";
+            this.Concepto.MinimumWidth = 6;
+            this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
+            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Descripcion.HeaderText = "Categoria";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 6;
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            // 
+            // Plato
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Plato.HeaderText = "Plato";
+            this.Plato.MinimumWidth = 9;
+            this.Plato.Name = "Plato";
+            this.Plato.ReadOnly = true;
             // 
             // txtNombreEmpleado
             // 
@@ -218,9 +284,9 @@
             // 
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label7.Location = new System.Drawing.Point(11, 99);
+            this.label7.Location = new System.Drawing.Point(0, 99);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(130, 35);
+            this.label7.Size = new System.Drawing.Size(141, 35);
             this.label7.TabIndex = 72;
             this.label7.Text = "Dirección: ";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -259,13 +325,87 @@
             this.panel1.Size = new System.Drawing.Size(1869, 925);
             this.panel1.TabIndex = 120;
             // 
+            // txtTotal
+            // 
+            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            this.txtTotal.Enabled = false;
+            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F);
+            this.txtTotal.Location = new System.Drawing.Point(1446, 847);
+            this.txtTotal.Name = "txtTotal";
+            this.txtTotal.Size = new System.Drawing.Size(158, 34);
+            this.txtTotal.TabIndex = 123;
+            // 
+            // txtIVA
+            // 
+            this.txtIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            this.txtIVA.Enabled = false;
+            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F);
+            this.txtIVA.Location = new System.Drawing.Point(1446, 797);
+            this.txtIVA.Name = "txtIVA";
+            this.txtIVA.Size = new System.Drawing.Size(158, 34);
+            this.txtIVA.TabIndex = 121;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Transparent;
+            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label19.Location = new System.Drawing.Point(1349, 848);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(91, 33);
+            this.label19.TabIndex = 122;
+            this.label19.Text = "Total:";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label11
+            // 
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(405, 312);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(103, 33);
+            this.label11.TabIndex = 128;
+            this.label11.Text = "Estado:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // label18
+            // 
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.label18.Location = new System.Drawing.Point(1354, 798);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(86, 35);
+            this.label18.TabIndex = 120;
+            this.label18.Text = "IVA:";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // txtEstado
+            // 
+            this.txtEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
+            this.txtEstado.Location = new System.Drawing.Point(514, 308);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(155, 39);
+            this.txtEstado.TabIndex = 129;
+            // 
+            // label9
+            // 
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(57, 312);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(103, 35);
+            this.label9.TabIndex = 99;
+            this.label9.Text = "Fecha:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
             // label13
             // 
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label13.Location = new System.Drawing.Point(1320, 747);
+            this.label13.Location = new System.Drawing.Point(1306, 747);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(120, 35);
+            this.label13.Size = new System.Drawing.Size(134, 35);
             this.label13.TabIndex = 96;
             this.label13.Text = "Subtotal:";
             this.label13.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -294,6 +434,16 @@
             this.label20.TabIndex = 125;
             this.label20.Text = "Consulta";
             // 
+            // txtFecha
+            // 
+            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            this.txtFecha.Enabled = false;
+            this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
+            this.txtFecha.Location = new System.Drawing.Point(165, 310);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(201, 39);
+            this.txtFecha.TabIndex = 115;
+            // 
             // cmdPagar
             // 
             this.cmdPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(85)))));
@@ -316,6 +466,16 @@
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(158, 34);
             this.txtSubtotal.TabIndex = 119;
+            // 
+            // txtId
+            // 
+            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
+            this.txtId.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
+            this.txtId.Location = new System.Drawing.Point(165, 226);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(155, 39);
+            this.txtId.TabIndex = 125;
             // 
             // pictureBox1
             // 
@@ -402,9 +562,9 @@
             // 
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label1.Location = new System.Drawing.Point(9, 101);
+            this.label1.Location = new System.Drawing.Point(0, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(130, 35);
+            this.label1.Size = new System.Drawing.Size(139, 35);
             this.label1.TabIndex = 72;
             this.label1.Text = "Dirección: ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -466,166 +626,6 @@
             this.cmdCancelar.Text = "Cancelar Pedido";
             this.cmdCancelar.UseVisualStyleBackColor = false;
             this.cmdCancelar.Click += new System.EventHandler(this.cmdCancelar_Click);
-            // 
-            // txtTotal
-            // 
-            this.txtTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            this.txtTotal.Enabled = false;
-            this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F);
-            this.txtTotal.Location = new System.Drawing.Point(1446, 847);
-            this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(158, 34);
-            this.txtTotal.TabIndex = 123;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.Transparent;
-            this.label19.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label19.Location = new System.Drawing.Point(1349, 848);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(91, 33);
-            this.label19.TabIndex = 122;
-            this.label19.Text = "Total:";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtIVA
-            // 
-            this.txtIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            this.txtIVA.Enabled = false;
-            this.txtIVA.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.14286F);
-            this.txtIVA.Location = new System.Drawing.Point(1446, 797);
-            this.txtIVA.Name = "txtIVA";
-            this.txtIVA.Size = new System.Drawing.Size(158, 34);
-            this.txtIVA.TabIndex = 121;
-            // 
-            // label18
-            // 
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label18.Location = new System.Drawing.Point(1354, 798);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(86, 35);
-            this.label18.TabIndex = 120;
-            this.label18.Text = "IVA:";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtEstado
-            // 
-            this.txtEstado.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            this.txtEstado.Enabled = false;
-            this.txtEstado.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtEstado.Location = new System.Drawing.Point(514, 308);
-            this.txtEstado.Name = "txtEstado";
-            this.txtEstado.Size = new System.Drawing.Size(155, 39);
-            this.txtEstado.TabIndex = 129;
-            // 
-            // label11
-            // 
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(405, 312);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(103, 33);
-            this.label11.TabIndex = 128;
-            this.label11.Text = "Estado:";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // label9
-            // 
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(75, 312);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(85, 35);
-            this.label9.TabIndex = 99;
-            this.label9.Text = "Fecha:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            this.txtFecha.Enabled = false;
-            this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtFecha.Location = new System.Drawing.Point(165, 310);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(201, 39);
-            this.txtFecha.TabIndex = 115;
-            // 
-            // txtId
-            // 
-            this.txtId.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            this.txtId.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
-            this.txtId.Location = new System.Drawing.Point(165, 226);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(155, 39);
-            this.txtId.TabIndex = 125;
-            // 
-            // Id_Menú
-            // 
-            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id_Menú.HeaderText = "ID Menú";
-            this.Id_Menú.MinimumWidth = 6;
-            this.Id_Menú.Name = "Id_Menú";
-            this.Id_Menú.ReadOnly = true;
-            this.Id_Menú.Width = 133;
-            // 
-            // Concepto
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Concepto.HeaderText = "Producto";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Descripcion
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Descripcion.HeaderText = "Categoria";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Importe
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Importe.HeaderText = "Importe";
-            this.Importe.MinimumWidth = 6;
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            // 
-            // Plato
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Plato.HeaderText = "Plato";
-            this.Plato.MinimumWidth = 9;
-            this.Plato.Name = "Plato";
-            this.Plato.ReadOnly = true;
             // 
             // frmConsulta
             // 

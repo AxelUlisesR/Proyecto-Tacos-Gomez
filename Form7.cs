@@ -61,5 +61,20 @@ namespace Proyecto_Tacos_Gomez
                 MessageBox.Show("Error al generar el reporte: " + ex.Message);
             }
         }
+
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Menu frm = new Menu();
+                frm.Show();
+                conexion.Close();
+                this.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cerrar la conexión: " + ex.Message);
+            }
+        }
     }
 }

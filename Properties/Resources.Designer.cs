@@ -223,6 +223,16 @@ namespace Proyecto_Tacos_Gomez.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Captura_de_pantalla_2025_10_27_215131 {
+            get {
+                object obj = ResourceManager.GetObject("Captura de pantalla 2025-10-27 215131", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Gemini_Generated_Image_jkx6mgjkx6mgjkx6 {
             get {
                 object obj = ResourceManager.GetObject("Gemini_Generated_Image_jkx6mgjkx6mgjkx6", resourceCulture);

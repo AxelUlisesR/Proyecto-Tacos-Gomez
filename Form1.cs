@@ -53,5 +53,10 @@ namespace Proyecto_Tacos_Gomez
             Hide();
             reportesForm.Show();
         }
+
+        private void cmdSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
