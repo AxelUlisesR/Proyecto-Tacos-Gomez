@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cbCliente = new System.Windows.Forms.ComboBox();
             this.txtCliente = new System.Windows.Forms.MaskedTextBox();
             this.txtDireccion = new System.Windows.Forms.TextBox();
@@ -53,6 +53,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
+            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtIVA = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
@@ -79,24 +86,17 @@
             this.txtCantidad = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // cbCliente
@@ -291,21 +291,21 @@
             // 
             this.dgvMenu.AllowUserToAddRows = false;
             this.dgvMenu.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle55.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle55;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle56.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle56.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle56.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle56.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle56.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle56;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Menú,
@@ -315,9 +315,10 @@
             this.Cantidad,
             this.Importe,
             this.Plato});
+            this.dgvMenu.Enabled = false;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.Location = new System.Drawing.Point(956, 34);
-            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMenu.Margin = new System.Windows.Forms.Padding(4);
             this.dgvMenu.Name = "dgvMenu";
             this.dgvMenu.ReadOnly = true;
             this.dgvMenu.RowHeadersWidth = 51;
@@ -325,13 +326,79 @@
             this.dgvMenu.Size = new System.Drawing.Size(886, 627);
             this.dgvMenu.TabIndex = 106;
             // 
+            // Id_Menú
+            // 
+            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_Menú.HeaderText = "ID Menú";
+            this.Id_Menú.MinimumWidth = 6;
+            this.Id_Menú.Name = "Id_Menú";
+            this.Id_Menú.ReadOnly = true;
+            this.Id_Menú.Width = 133;
+            // 
+            // Concepto
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Concepto.HeaderText = "Producto";
+            this.Concepto.MinimumWidth = 6;
+            this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
+            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Descripcion.HeaderText = "Categoria";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 6;
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            // 
+            // Plato
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Plato.HeaderText = "Plato";
+            this.Plato.MinimumWidth = 9;
+            this.Plato.Name = "Plato";
+            this.Plato.ReadOnly = true;
+            // 
             // txtIVA
             // 
             this.txtIVA.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
             this.txtIVA.Enabled = false;
             this.txtIVA.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.txtIVA.Location = new System.Drawing.Point(1195, 779);
-            this.txtIVA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtIVA.Margin = new System.Windows.Forms.Padding(4);
             this.txtIVA.Name = "txtIVA";
             this.txtIVA.Size = new System.Drawing.Size(216, 39);
             this.txtIVA.TabIndex = 115;
@@ -341,7 +408,7 @@
             this.txtTotal.Enabled = false;
             this.txtTotal.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.txtTotal.Location = new System.Drawing.Point(1195, 835);
-            this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtTotal.Name = "txtTotal";
             this.txtTotal.Size = new System.Drawing.Size(216, 39);
             this.txtTotal.TabIndex = 117;
@@ -352,7 +419,7 @@
             this.txtSubtotal.Enabled = false;
             this.txtSubtotal.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.txtSubtotal.Location = new System.Drawing.Point(1195, 726);
-            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSubtotal.Margin = new System.Windows.Forms.Padding(4);
             this.txtSubtotal.Name = "txtSubtotal";
             this.txtSubtotal.Size = new System.Drawing.Size(216, 39);
             this.txtSubtotal.TabIndex = 113;
@@ -398,7 +465,7 @@
             this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(85)))));
             this.btnNuevo.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevo.Location = new System.Drawing.Point(777, 232);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(144, 70);
             this.btnNuevo.TabIndex = 108;
@@ -412,7 +479,7 @@
             this.btnGrabar.Enabled = false;
             this.btnGrabar.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(777, 343);
-            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGrabar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(144, 70);
             this.btnGrabar.TabIndex = 109;
@@ -462,7 +529,7 @@
             this.btnSeleccionarPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(190)))), ((int)(((byte)(175)))), ((int)(((byte)(160)))));
             this.btnSeleccionarPlato.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnSeleccionarPlato.Location = new System.Drawing.Point(565, 202);
-            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSeleccionarPlato.Margin = new System.Windows.Forms.Padding(4);
             this.btnSeleccionarPlato.Name = "btnSeleccionarPlato";
             this.btnSeleccionarPlato.Size = new System.Drawing.Size(220, 56);
             this.btnSeleccionarPlato.TabIndex = 99;
@@ -488,7 +555,7 @@
             this.cboProducto.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.cboProducto.FormattingEnabled = true;
             this.cboProducto.Location = new System.Drawing.Point(164, 34);
-            this.cboProducto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboProducto.Margin = new System.Windows.Forms.Padding(4);
             this.cboProducto.Name = "cboProducto";
             this.cboProducto.Size = new System.Drawing.Size(497, 40);
             this.cboProducto.TabIndex = 79;
@@ -511,7 +578,7 @@
             this.btnNuevoPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(150)))), ((int)(((byte)(85)))));
             this.btnNuevoPlato.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.btnNuevoPlato.Location = new System.Drawing.Point(378, 202);
-            this.btnNuevoPlato.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevoPlato.Margin = new System.Windows.Forms.Padding(4);
             this.btnNuevoPlato.Name = "btnNuevoPlato";
             this.btnNuevoPlato.Size = new System.Drawing.Size(160, 56);
             this.btnNuevoPlato.TabIndex = 98;
@@ -549,7 +616,7 @@
             this.txtCategoria.Enabled = false;
             this.txtCategoria.Font = new System.Drawing.Font("Segoe UI", 14.14286F);
             this.txtCategoria.Location = new System.Drawing.Point(164, 90);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(497, 39);
             this.txtCategoria.TabIndex = 88;
@@ -568,7 +635,7 @@
             this.cmdAceptar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(130)))), ((int)(((byte)(150)))));
             this.cmdAceptar.Font = new System.Drawing.Font("Segoe UI", 15.85714F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdAceptar.Location = new System.Drawing.Point(730, 137);
-            this.cmdAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cmdAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.cmdAceptar.Name = "cmdAceptar";
             this.cmdAceptar.Size = new System.Drawing.Size(95, 56);
             this.cmdAceptar.TabIndex = 91;
@@ -616,13 +683,14 @@
             this.txtCantidad.Name = "txtCantidad";
             this.txtCantidad.Size = new System.Drawing.Size(155, 39);
             this.txtCantidad.TabIndex = 93;
+            this.txtCantidad.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCantidad_KeyPress);
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(145)))), ((int)(((byte)(50)))));
             this.button2.Font = new System.Drawing.Font("Segoe UI", 14.14286F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(777, 486);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(777, 455);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(144, 70);
             this.button2.TabIndex = 110;
@@ -636,13 +704,24 @@
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(60)))), ((int)(((byte)(40)))));
             this.button3.Font = new System.Drawing.Font("Segoe UI", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.button3.Location = new System.Drawing.Point(1698, 812);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(144, 70);
             this.button3.TabIndex = 111;
             this.button3.Text = "Salir";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proyecto_Tacos_Gomez.Properties.Resources.Captura_de_pantalla_2025_10_26_180606;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 23);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(171, 126);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 123;
+            this.pictureBox1.TabStop = false;
             // 
             // label20
             // 
@@ -699,83 +778,6 @@
             this.txtId.TabIndex = 119;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proyecto_Tacos_Gomez.Properties.Resources.Captura_de_pantalla_2025_10_26_180606;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 23);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(171, 126);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 123;
-            this.pictureBox1.TabStop = false;
-            // 
-            // Id_Menú
-            // 
-            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle57.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle57;
-            this.Id_Menú.HeaderText = "ID Menú";
-            this.Id_Menú.MinimumWidth = 6;
-            this.Id_Menú.Name = "Id_Menú";
-            this.Id_Menú.ReadOnly = true;
-            this.Id_Menú.Width = 133;
-            // 
-            // Concepto
-            // 
-            dataGridViewCellStyle58.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Concepto.DefaultCellStyle = dataGridViewCellStyle58;
-            this.Concepto.HeaderText = "Producto";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Descripcion
-            // 
-            dataGridViewCellStyle59.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle59;
-            this.Descripcion.HeaderText = "Categoria";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            dataGridViewCellStyle60.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle60;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle61;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Importe
-            // 
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle62;
-            this.Importe.HeaderText = "Importe";
-            this.Importe.MinimumWidth = 6;
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            // 
-            // Plato
-            // 
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Plato.DefaultCellStyle = dataGridViewCellStyle63;
-            this.Plato.HeaderText = "Plato";
-            this.Plato.MinimumWidth = 9;
-            this.Plato.Name = "Plato";
-            this.Plato.ReadOnly = true;
-            // 
             // Ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -794,11 +796,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

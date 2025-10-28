@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label16 = new System.Windows.Forms.Label();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
             this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -103,21 +103,21 @@
             // 
             this.dgvMenu.AllowUserToAddRows = false;
             this.dgvMenu.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.dgvMenu.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.dgvMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(215)))), ((int)(((byte)(180)))));
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(40)))), ((int)(((byte)(20)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(250)))), ((int)(((byte)(250)))));
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgvMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Id_Menú,
@@ -127,6 +127,7 @@
             this.Cantidad,
             this.Importe,
             this.Plato});
+            this.dgvMenu.Enabled = false;
             this.dgvMenu.EnableHeadersVisualStyles = false;
             this.dgvMenu.Location = new System.Drawing.Point(782, 28);
             this.dgvMenu.Name = "dgvMenu";
@@ -139,8 +140,8 @@
             // Id_Menú
             // 
             this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle12;
             this.Id_Menú.HeaderText = "ID Menú";
             this.Id_Menú.MinimumWidth = 6;
             this.Id_Menú.Name = "Id_Menú";
@@ -149,8 +150,8 @@
             // 
             // Concepto
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle13;
             this.Concepto.HeaderText = "Producto";
             this.Concepto.MinimumWidth = 6;
             this.Concepto.Name = "Concepto";
@@ -159,8 +160,8 @@
             // 
             // Descripcion
             // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle14;
             this.Descripcion.HeaderText = "Categoria";
             this.Descripcion.MinimumWidth = 6;
             this.Descripcion.Name = "Descripcion";
@@ -168,8 +169,8 @@
             // 
             // Precio
             // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle15;
             this.Precio.HeaderText = "Precio";
             this.Precio.MinimumWidth = 6;
             this.Precio.Name = "Precio";
@@ -177,8 +178,8 @@
             // 
             // Cantidad
             // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle16;
             this.Cantidad.HeaderText = "Cantidad";
             this.Cantidad.MinimumWidth = 6;
             this.Cantidad.Name = "Cantidad";
@@ -186,8 +187,8 @@
             // 
             // Importe
             // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle17;
             this.Importe.HeaderText = "Importe";
             this.Importe.MinimumWidth = 6;
             this.Importe.Name = "Importe";
@@ -195,8 +196,8 @@
             // 
             // Plato
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Plato.DefaultCellStyle = dataGridViewCellStyle18;
             this.Plato.HeaderText = "Plato";
             this.Plato.MinimumWidth = 9;
             this.Plato.Name = "Plato";
@@ -476,6 +477,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(155, 39);
             this.txtId.TabIndex = 125;
+            this.txtId.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtId_KeyPress);
             // 
             // pictureBox1
             // 

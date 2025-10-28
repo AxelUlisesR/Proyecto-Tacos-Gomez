@@ -338,6 +338,32 @@ namespace Proyecto_Tacos_Gomez
 
         private void btnNuevoPlato_Click(object sender, EventArgs e)
         {
+            // Verificar si el plato actual tiene tacos registrados
+            bool tieneTacos = false;
+
+            foreach (DataGridViewRow fila in dgvMenu.Rows)
+            {
+                if (fila.IsNewRow) continue;
+
+                int platoFila = Convert.ToInt32(fila.Cells[6].Value);
+                if (platoFila == platoActual)
+                {
+                    tieneTacos = true;
+                    break;
+                }
+            }
+
+            // Si no tiene tacos, no permitir crear nuevo plato
+            if (!tieneTacos)
+            {
+                MessageBox.Show($"No puedes crear un nuevo plato sin registrar tacos en el plato {platoActual}.",
+                                "Acción no permitida",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Si sí tiene tacos, pasar al siguiente plato
             platoActual++;
             tacosEnPlato = 0;
             txtPlato.Text = platoActual.ToString();
@@ -397,6 +423,14 @@ namespace Proyecto_Tacos_Gomez
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void txtCantidad_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

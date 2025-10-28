@@ -270,6 +270,24 @@ namespace Proyecto_Tacos_Gomez
             }
         }
 
-        
+        private void txtId_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            if (char.IsDigit(e.KeyChar))
+            {
+                int valor = int.Parse(e.KeyChar.ToString());
+                if (valor < 1)
+                {
+                    e.Handled = true;
+                    MessageBox.Show("El id 0 no existe.",
+                                    "Ingresa otro id",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                }
+            }
+        }
     }
 }
