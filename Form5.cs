@@ -138,7 +138,7 @@ namespace Proyecto_Tacos_Gomez
         {
             if (string.IsNullOrWhiteSpace(cboProducto.Text) ||
                 string.IsNullOrWhiteSpace(txtCantidad.Text) ||
-                !int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0)
+                !int.TryParse(txtCantidad.Text, out int cantidad) || cantidad <= 0 || cantidad >= 20)
             {
                 MessageBox.Show("Asegúrate de seleccionar un producto e indicar una cantidad válida.",
                                 "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

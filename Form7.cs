@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 using System.IO;
 using System.Windows.Forms;
 using Microsoft.Reporting.WinForms;
@@ -80,5 +81,35 @@ namespace Proyecto_Tacos_Gomez
                 MessageBox.Show("Error al cerrar la conexión: " + ex.Message);
             }
         }
+
+        private void btnGenerar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexion.Open();
+                string consulta = "SELECT * FROM obtener_ordenes_por_fecha(@fecha::date);";
+                NpgsqlCommand comando = new NpgsqlCommand(consulta, conexion);
+                comando.Parameters.AddWithValue("@fecha", dtpFecha.Value.Date);
+                NpgsqlDataAdapter adaptador = new NpgsqlDataAdapter(comando);
+                TaqueriaDataSet ds = new TaqueriaDataSet();
+                adaptador.Fill(ds.orden);
+                ReportDataSource fuente = new ReportDataSource("DataSet1", ds.Tables["orden"]);
+                reportViewer1.LocalReport.DataSources.Clear();
+                reportViewer1.LocalReport.DataSources.Add(fuente);
+                string rutaReporte = Path.Combine(Application.StartupPath, @"..\..\Report3.rdlc");
+                reportViewer1.LocalReport.ReportPath = Path.GetFullPath(rutaReporte);
+                reportViewer1.RefreshReport();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al generar el reporte por fecha: " + ex.Message);
+            }
+            finally
+            {
+                if (conexion.State == ConnectionState.Open)
+                    conexion.Close();
+            }
+        }
+
     }
 }

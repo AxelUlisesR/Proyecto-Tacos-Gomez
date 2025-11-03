@@ -220,6 +220,7 @@
     </Compile>
     <EmbeddedResource Include="Report1.rdlc" />
     <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Clientes.datasource" />
     <None Include="Properties\DataSources\Empleados.datasource" />
