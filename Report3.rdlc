@@ -6,24 +6,24 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>5.96287cm</Width>
+              <Width>6.41584cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.96287cm</Width>
+              <Width>6.41584cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.96287cm</Width>
+              <Width>6.41584cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.96287cm</Width>
+              <Width>6.41584cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>5.96287cm</Width>
+              <Width>6.41584cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.15033cm</Height>
+              <Height>0.95033cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -218,7 +218,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>1.15033cm</Height>
+              <Height>0.95033cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -406,7 +406,7 @@
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.95033cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -419,8 +419,10 @@
                             <TextRun>
                               <Value>Total general:</Value>
                               <Style>
+                                <FontStyle>Italic</FontStyle>
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -566,6 +568,7 @@
                                 <FontFamily>Segoe UI</FontFamily>
                                 <FontSize>14pt</FontSize>
                                 <Format>'$'0.00;('$'0.00)</Format>
+                                <Color>Brown</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -617,9 +620,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>4.95558cm</Top>
-        <Height>2.90066cm</Height>
-        <Width>29.81435cm</Width>
+        <Top>4.51108cm</Top>
+        <Left>1.07175cm</Left>
+        <Height>2.85099cm</Height>
+        <Width>32.07918cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -637,7 +641,7 @@
                 <Style>
                   <FontStyle>Italic</FontStyle>
                   <FontFamily>Segoe UI</FontFamily>
-                  <FontSize>16pt</FontSize>
+                  <FontSize>36pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                   <Color>Teal</Color>
                 </Style>
@@ -649,10 +653,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox2</rd:DefaultName>
-        <Top>2.38559cm</Top>
+        <Top>1.20026cm</Top>
         <Left>9.8493cm</Left>
-        <Height>1.0445cm</Height>
-        <Width>9.97889cm</Width>
+        <Height>1.72183cm</Height>
+        <Width>19.08056cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -669,8 +673,8 @@
         <Source>Embedded</Source>
         <Value>tacos_gomez</Value>
         <Sizing>FitProportional</Sizing>
-        <Top>1.42209cm</Top>
-        <Left>3.19287cm</Left>
+        <Top>0.59659cm</Top>
+        <Left>4.68795cm</Left>
         <Height>2.85467cm</Height>
         <Width>2.77cm</Width>
         <ZIndex>2</ZIndex>
@@ -680,11 +684,22 @@
           </Border>
         </Style>
       </Image>
+      <Line Name="Line1">
+        <Top>3.83003cm</Top>
+        <Height>0cm</Height>
+        <Width>34.33536cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
     </ReportItems>
-    <Height>3.41667in</Height>
+    <Height>4.39523in</Height>
     <Style />
   </Body>
-  <Width>12.72219in</Width>
+  <Width>13.51786in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
