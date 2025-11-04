@@ -23,7 +23,11 @@ namespace Proyecto_Tacos_Gomez
             try
             {
                 txtNombre.MaxLength = 40;
-                txtCategoria.MaxLength = 40;
+                cbCategoria.MaxLength = 40;
+                cbCategoria.Items.Add("Taco");
+                cbCategoria.Items.Add("Quesadilla");
+                cbCategoria.Items.Add("Torta");
+                cbCategoria.Items.Add("Bebida");
                 conexion.Open();
                 comando.Connection = conexion;
                 CargarProductos();
@@ -37,25 +41,24 @@ namespace Proyecto_Tacos_Gomez
 
         private void EstadoInicial()
         {
+            LimpiarCampos();
             txtId.Enabled = false;
             txtNombre.Enabled = false;
             mtbPrecio.Enabled = false;
-            txtCategoria.Enabled = false;
+            cbCategoria.Enabled = false;
 
             btnNuevo.Enabled = true;
             btnGrabar.Enabled = false;
             btnModificar.Enabled = false;
             btnBusca.Enabled = true;
             btnCancelar.Enabled = true;
-
-            LimpiarCampos();
         }
 
         private void ModoEdicion(bool nuevo = false)
         {
             txtNombre.Enabled = true;
             mtbPrecio.Enabled = true;
-            txtCategoria.Enabled = true;
+            cbCategoria.Enabled = true;
 
             btnNuevo.Enabled = false;
             btnBusca.Enabled = false;
@@ -68,7 +71,7 @@ namespace Proyecto_Tacos_Gomez
             txtId.Text = "";
             txtNombre.Text = "";
             mtbPrecio.Text = "";
-            txtCategoria.Text = "";
+            cbCategoria.Text = "";
         }
 
         private void CargarProductos()
@@ -108,7 +111,7 @@ namespace Proyecto_Tacos_Gomez
             {
                 return;
                 txtNombre.KeyPress += txtNombre_KeyPress;
-                txtCategoria.KeyPress += txtCategoria_KeyPress;
+                cbCategoria.KeyPress += txtCategoria_KeyPress;
             }
             try
             {
@@ -116,7 +119,7 @@ namespace Proyecto_Tacos_Gomez
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 comando.Parameters.AddWithValue("@precio", Convert.ToDouble(mtbPrecio.Text));
-                comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                comando.Parameters.AddWithValue("@categoria", cbCategoria.Text);
                 comando.ExecuteNonQuery();
 
                 MessageBox.Show("Producto guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -146,7 +149,7 @@ namespace Proyecto_Tacos_Gomez
                 comando.Parameters.Clear();
                 comando.Parameters.AddWithValue("@nombre", txtNombre.Text);
                 comando.Parameters.AddWithValue("@precio", Convert.ToDouble(mtbPrecio.Text));
-                comando.Parameters.AddWithValue("@categoria", txtCategoria.Text);
+                comando.Parameters.AddWithValue("@categoria", cbCategoria.Text);
                 comando.Parameters.AddWithValue("@id", Convert.ToInt32(txtId.Text));
                 comando.ExecuteNonQuery();
 
@@ -188,7 +191,7 @@ namespace Proyecto_Tacos_Gomez
                     txtId.Text = lector["idProducto"].ToString();
                     txtNombre.Text = lector["nombre"].ToString();
                     mtbPrecio.Text = lector["precio"].ToString();
-                    txtCategoria.Text = lector["categoria"].ToString();
+                    cbCategoria.Text = lector["categoria"].ToString();
 
                     lector.Close();
                     ModoEdicion(false);
@@ -242,9 +245,9 @@ namespace Proyecto_Tacos_Gomez
                 errorProvider1.SetError(mtbPrecio, "El precio es obligatorio.");
                 esValido = false;
             }
-            if (string.IsNullOrWhiteSpace(txtCategoria.Text))
+            if (string.IsNullOrWhiteSpace(cbCategoria.Text))
             {
-                errorProvider1.SetError(txtCategoria, "La categoria es obligatorio.");
+                errorProvider1.SetError(cbCategoria, "La categoria es obligatorio.");
                 esValido = false;
             }
 
@@ -262,14 +265,14 @@ namespace Proyecto_Tacos_Gomez
                 errorProvider1.SetError(txtNombre, "El nombre no puede tener más de 40 caracteres.");
                 esValido = false;
             }
-            if (txtCategoria.Text.Length > 40)
+            if (cbCategoria.Text.Length > 40)
             {
-                errorProvider1.SetError(txtCategoria, "La categoria no puede tener más de 40 caracteres.");
+                errorProvider1.SetError(cbCategoria, "La categoria no puede tener más de 40 caracteres.");
                 esValido = false;
             }
             //4. solo letras en categoria
-            if (!string.IsNullOrWhiteSpace(txtCategoria.Text) &&
-                !Regex.IsMatch(txtCategoria.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
+            if (!string.IsNullOrWhiteSpace(cbCategoria.Text) &&
+                !Regex.IsMatch(cbCategoria.Text, @"^[a-zA-ZáéíóúÁÉÍÓÚñÑ\s]+$"))
             {
                 errorProvider1.SetError(txtNombre, "La categoria solo debe contener letras.");
                 esValido = false;
