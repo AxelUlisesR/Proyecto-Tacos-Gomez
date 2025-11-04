@@ -125,6 +125,7 @@ namespace Proyecto_Tacos_Gomez
                 MessageBox.Show("Producto guardado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 CargarProductos();
                 EstadoInicial();
+                cbCategoria.SelectedIndex = -1;
             }
             catch (Exception ex)
             {
