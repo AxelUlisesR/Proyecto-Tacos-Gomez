@@ -40,10 +40,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.dgvClientes = new System.Windows.Forms.DataGridView();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.btnBusca = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
@@ -58,6 +54,10 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientes)).BeginInit();
@@ -164,46 +164,6 @@
             this.dgvClientes.RowTemplate.Height = 24;
             this.dgvClientes.Size = new System.Drawing.Size(904, 729);
             this.dgvClientes.TabIndex = 65;
-            // 
-            // Id
-            // 
-            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id.HeaderText = "ID";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Width = 76;
-            // 
-            // Concepto
-            // 
-            this.Concepto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 16.2F);
-            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Concepto.HeaderText = "Nombre";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Width = 153;
-            // 
-            // Descripcion
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 16.2F);
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Descripcion.HeaderText = "Dirección";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 16.2F);
-            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Column1.HeaderText = "Telefono";
-            this.Column1.MinimumWidth = 9;
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
             // 
             // label4
             // 
@@ -313,7 +273,7 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(163, 55);
             this.Telefono.TabIndex = 74;
-            this.Telefono.Text = "Telefono:";
+            this.Telefono.Text = "Teléfono:";
             this.Telefono.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtNombre
@@ -365,6 +325,46 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // Id
+            // 
+            this.Id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id.HeaderText = "ID";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Width = 76;
+            // 
+            // Concepto
+            // 
+            this.Concepto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 16.2F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Concepto.HeaderText = "Nombre";
+            this.Concepto.MinimumWidth = 6;
+            this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
+            this.Concepto.Width = 153;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 16.2F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Descripcion.HeaderText = "Dirección";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 16.2F);
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column1.HeaderText = "Teléfono";
+            this.Column1.MinimumWidth = 9;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
             // Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -408,10 +408,10 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvClientes;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Concepto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

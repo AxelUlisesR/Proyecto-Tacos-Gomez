@@ -53,13 +53,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvMenu = new System.Windows.Forms.DataGridView();
-            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtIVA = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.txtSubtotal = new System.Windows.Forms.TextBox();
@@ -91,6 +84,13 @@
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.Id_Menú = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Concepto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Plato = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenu)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -153,7 +153,7 @@
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(130, 35);
             this.Telefono.TabIndex = 74;
-            this.Telefono.Text = "Telefono:";
+            this.Telefono.Text = "Teléfono:";
             this.Telefono.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label1
@@ -244,7 +244,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(130, 35);
             this.label6.TabIndex = 74;
-            this.label6.Text = "Telefono:";
+            this.label6.Text = "Teléfono:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // label7
@@ -327,72 +327,6 @@
             this.dgvMenu.RowTemplate.Height = 24;
             this.dgvMenu.Size = new System.Drawing.Size(886, 627);
             this.dgvMenu.TabIndex = 106;
-            // 
-            // Id_Menú
-            // 
-            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id_Menú.HeaderText = "ID Menú";
-            this.Id_Menú.MinimumWidth = 6;
-            this.Id_Menú.Name = "Id_Menú";
-            this.Id_Menú.ReadOnly = true;
-            this.Id_Menú.Width = 133;
-            // 
-            // Concepto
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Concepto.HeaderText = "Producto";
-            this.Concepto.MinimumWidth = 6;
-            this.Concepto.Name = "Concepto";
-            this.Concepto.ReadOnly = true;
-            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // Descripcion
-            // 
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
-            this.Descripcion.HeaderText = "Categoria";
-            this.Descripcion.MinimumWidth = 6;
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
-            this.Precio.HeaderText = "Precio";
-            this.Precio.MinimumWidth = 6;
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.MinimumWidth = 6;
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // Importe
-            // 
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
-            this.Importe.HeaderText = "Importe";
-            this.Importe.MinimumWidth = 6;
-            this.Importe.Name = "Importe";
-            this.Importe.ReadOnly = true;
-            // 
-            // Plato
-            // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
-            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
-            this.Plato.HeaderText = "Plato";
-            this.Plato.MinimumWidth = 9;
-            this.Plato.Name = "Plato";
-            this.Plato.ReadOnly = true;
             // 
             // txtIVA
             // 
@@ -598,7 +532,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(150, 44);
             this.label9.TabIndex = 87;
-            this.label9.Text = "Categoria:";
+            this.label9.Text = "Categoría:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // label17
@@ -780,6 +714,72 @@
             this.txtId.Size = new System.Drawing.Size(153, 87);
             this.txtId.TabIndex = 119;
             this.txtId.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // Id_Menú
+            // 
+            this.Id_Menú.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Id_Menú.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Id_Menú.HeaderText = "ID Menú";
+            this.Id_Menú.MinimumWidth = 6;
+            this.Id_Menú.Name = "Id_Menú";
+            this.Id_Menú.ReadOnly = true;
+            this.Id_Menú.Width = 133;
+            // 
+            // Concepto
+            // 
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Concepto.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Concepto.HeaderText = "Producto";
+            this.Concepto.MinimumWidth = 6;
+            this.Concepto.Name = "Concepto";
+            this.Concepto.ReadOnly = true;
+            this.Concepto.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // Descripcion
+            // 
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Descripcion.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Descripcion.HeaderText = "Categoría";
+            this.Descripcion.MinimumWidth = 6;
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Precio.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Precio.HeaderText = "Precio";
+            this.Precio.MinimumWidth = 6;
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Cantidad.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.MinimumWidth = 6;
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Importe.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Importe.HeaderText = "Importe";
+            this.Importe.MinimumWidth = 6;
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
+            // 
+            // Plato
+            // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 13.8F);
+            this.Plato.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Plato.HeaderText = "Plato";
+            this.Plato.MinimumWidth = 9;
+            this.Plato.Name = "Plato";
+            this.Plato.ReadOnly = true;
             // 
             // Ventas
             // 
