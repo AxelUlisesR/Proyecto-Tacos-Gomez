@@ -10,8 +10,7 @@ namespace Proyecto_Tacos_Gomez
     public partial class Form7 : Form
     {
         // Conexión a PostgreSQL
-        NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Database=Taqueria;Username=postgres;Password=Ramamos06;");
-
+        NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Database=Taqueria;Username=usuario;Password=1234;");
         public Form7()
         {
             InitializeComponent();

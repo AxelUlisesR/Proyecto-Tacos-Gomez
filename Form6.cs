@@ -9,8 +9,7 @@ namespace Proyecto_Tacos_Gomez
 {
     public partial class frmConsulta : Form
     {
-        NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Database=Taqueria;Username=postgres;Password=Ramamos06;");
-        NpgsqlCommand comando;
+        NpgsqlConnection conexion = new NpgsqlConnection("Host=localhost;Port=5432;Database=Taqueria;Username=usuario;Password=1234;"); NpgsqlCommand comando;
         NpgsqlDataReader lector;
 
         public frmConsulta()
